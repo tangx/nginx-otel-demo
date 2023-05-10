@@ -1,0 +1,31 @@
+version: '2'
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:1.45.0
+    ports:
+      - '16686:16686'
+    networks:
+      - nginx_otel_net
+
+  collector:
+    # image: otel/opentelemetry-collector:latest
+    image: otel/opentelemetry-collector:0.77.0
+    command:
+      - --config=/etc/otel-collector-config.yaml
+    volumes:
+      - ./conf.d/collector/otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    networks:
+      - nginx_otel_net
+  nginx:
+    image: nginx-otel:v1.23.1
+    volumes:
+      - ./conf.d/nginx/opentelemetry_module.conf:/etc/nginx/conf.d/opentelemetry_module.conf
+    ports:
+      - 18080:80
+
+    networks:
+      - nginx_otel_net
+
+networks:
+  nginx_otel_net:
+
