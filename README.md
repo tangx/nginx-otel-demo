@@ -20,3 +20,9 @@
 1. Integrating OpenTelemetry into the Modern Apps Reference Architecture – A Progress Report: https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report/
 2. NGINX Tutorial: How to Use OpenTelemetry Tracing to Understand Your Microservices
 : https://www.nginx.com/blog/nginx-tutorial-opentelemetry-tracing-understand-microservices/
+
+
+## Nginx Otel Module
+
+1. https://github.com/open-telemetry/opentelemetry-cpp-contrib/blob/main/instrumentation/nginx/README.md
+2. 日文, nginx 编译安装 otel_nginx_module.so https://ymtdzzz.dev/post/nginx-with-opentelemetry/
