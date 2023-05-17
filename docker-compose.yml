@@ -26,7 +26,6 @@ services:
     #   - OTEL_EXPORTER_OTLP_ENDPOINT="collector:4317"
     volumes:
       # - ./conf.d/nginx/opentelemetry_module.conf:/usr/lib/nginx/modules/otel_ngx_module.so
-
       # - ./otel_ngx_module-debian-11.3-nginx-1.24.0.so:/opt/modules/otel_ngx_module.so
       - ./conf.d/nginx/otel-nginx.toml:/conf/otel-nginx.toml
       - ./conf.d/nginx/nginx.conf:/etc/nginx/nginx.conf
