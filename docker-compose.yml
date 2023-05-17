@@ -20,7 +20,8 @@ services:
 
   nginx:
     # image: nginx:1.24.0
-    image: uyinn28/nginx:1.24.0-alpine3.17-otel-v2
+    # image: uyinn28/nginx:1.24.0-alpine3.17-otel-v2
+    image: uyinn28/nginx:1.21.6-alpine3.15-otel-v2
     # environment:
     #   - OTEL_EXPORTER_OTLP_ENDPOINT="collector:4317"
     volumes:
